@@ -5,6 +5,7 @@ const cats = [
     },
     {
         name: "Harold",
+        
     },
     {
         name: "Blurt",
@@ -58,7 +59,7 @@ function list (){
 }
 
 
-// Question 8 ********* Create a function called createCats. The function will have one parameter called cats. ******** Inside the function loop through the value passed in as cats and create HTML for each object in the array. ***** Wrap each item in a div, each name property in an h5 tag and each age property in a p tag. ******** If the age property is missing, it should display “Age unknown” instead. ********** Return the HTML from the function. *********** Call the function and pass in the cats array as the argument. ************ Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container.
+// Question 8 ********* Create a function called createCats(done). The function will have one parameter called cats (done). ******** Inside the function loop through the value passed in as cats and create HTML for each object in the array(done). ***** Wrap each item in a div, each name property in an h5 tag and each age property in a p tag (done). ******** If the age property is missing, it should display “Age unknown” instead. ********** Return the HTML from the function. *********** Call the function and pass in the cats array as the argument. ************ Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container.
 
 function createCats (cats){
     for (cat of cats){
@@ -67,16 +68,23 @@ function createCats (cats){
             <h5>Blob</h5>
             <p>10</p>
             <h5>Harold</h5>
-            <p>Age unknown</p>
+            <p> Age unknown </p>
             <h5>Blurt</h5>
             <p>21</p>
         </div>
         `;
+        if (age != null){
+            console.log ("Age unknown")}
         console.log (cat)
     }
- 
+  
 }
+
+
+console.log("cats" + JSON.stringify(cats));
+
+
 
 const catContainer = document.querySelector (".cat-container")
 
-console.log(catContainer);
+console.dir(catContainer);
