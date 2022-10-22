@@ -1,3 +1,4 @@
+
 const cats = [
     {
         name: "Blob",
@@ -11,6 +12,7 @@ const cats = [
         name: "Blurt",
         age: 21
     },
+
 // Question 1     
     {
         complain: function (){
@@ -32,9 +34,9 @@ heading.innerHTML = headingText
 
 heading.style.fontSize = "2em";
 
-// Question 4 **********Add a class to the heading variable called subheading.
+// Question 4 
 
-
+heading.classList.add (".subheading");
 
 // Question 5 
 
@@ -55,11 +57,15 @@ resultsContainer.style.backgroundColor = "yellow";
 // Question 7 ********Create a function that has one parameter called list. ******* Inside the function, loop through the list parameter and console log the name property in each object. ********** Call the function and pass in the cats variable in the script.js file in the repo.
 
 function list (){
+    for (let i=0; i<cats.length; i++){
+        console.log (cats[i].name);
+        
+    }
+};
 
-}
+list.innerHTML = cats;
 
-
-// Question 8 ********* Create a function called createCats(done). The function will have one parameter called cats (done). ******** Inside the function loop through the value passed in as cats and create HTML for each object in the array(done). ***** Wrap each item in a div, each name property in an h5 tag and each age property in a p tag (done). ******** If the age property is missing, it should display “Age unknown” instead. ********** Return the HTML from the function. *********** Call the function and pass in the cats array as the argument. ************ Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container.
+// Question 8 
 
 function createCats (cats){
     for (cat of cats){
@@ -77,19 +83,28 @@ function createCats (cats){
             <p>21</p>
         </div>
         `;
-        if (age != null){
-            console.log ("Age unknown")}
-        console.log (cat)
     }
-  
+  console.log (createCats);
 }
 
 
-
-/*console.log("cats" + JSON.stringify(cats));
-
-
+console.log("cats" + JSON.stringify(cats));
 
 const catContainer = document.querySelector (".cat-container")
 
-console.dir(catContainer);*/
+console.dir(catContainer);
+
+catContainer.innerHTML = `
+<div>
+    <h5>Blob</h5>
+    <p>10</p>
+</div>
+<div> 
+    <h5>Harold</h5>
+    <p>Age unknown</p>
+</div>
+<div>
+    <h5>Blurt</h5>
+    <p>21</p>
+</div>
+`;
