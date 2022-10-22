@@ -38,7 +38,7 @@ heading.style.fontSize = "2em";
 
 // Question 5 
 
-let paragraphs = document.getElementsByTagName ("p");
+let paragraphs = document.querySelectorAll ("p");
 for (paragraph of paragraphs){
     paragraph.style.color = "red"; 
 }
@@ -67,8 +67,12 @@ function createCats (cats){
         <div>
             <h5>Blob</h5>
             <p>10</p>
+        </div>
+        <div> 
             <h5>Harold</h5>
-            <p> Age unknown </p>
+            <p>Age unknown</p>
+        </div>
+        <div>
             <h5>Blurt</h5>
             <p>21</p>
         </div>
@@ -81,10 +85,11 @@ function createCats (cats){
 }
 
 
-console.log("cats" + JSON.stringify(cats));
+
+/*console.log("cats" + JSON.stringify(cats));
 
 
 
 const catContainer = document.querySelector (".cat-container")
 
-console.dir(catContainer);
+console.dir(catContainer);*/
