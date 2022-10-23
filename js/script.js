@@ -13,14 +13,14 @@ const cats = [
         age: 21
     },
 
-// Question 1     
-    {
-        complain: function (){
-            console.log ("Meow!");
-        }
-    }
 ];
+// Question 1     
 
+    complain: function cat (){
+        console.log ("Meow!");
+        return cat;
+    }
+    
 
 
 // Question 2 
@@ -54,9 +54,9 @@ resultsContainer.style.backgroundColor = "yellow";
 
 
 
-// Question 7 ********Create a function that has one parameter called list. ******* Inside the function, loop through the list parameter and console log the name property in each object. ********** Call the function and pass in the cats variable in the script.js file in the repo.
+// Question 7 
 
-function list (){
+function list (cats){
     for (let i=0; i<cats.length; i++){
         console.log (cats[i].name);
         
@@ -65,7 +65,7 @@ function list (){
 
 list.innerHTML = cats;
 
-// Question 8 
+// Question 8  I have some issues with the code... I am aware It can be done better / in another way, I just didn't mange :( 
 
 function createCats (cats){
     for (cat of cats){
@@ -76,7 +76,7 @@ function createCats (cats){
         </div>
         <div> 
             <h5>Harold</h5>
-            <p>Age unknown</p>
+            <p>Age unknown/p>
         </div>
         <div>
             <h5>Blurt</h5>
@@ -85,6 +85,7 @@ function createCats (cats){
         `;
     }
   console.log (createCats);
+    return html
 }
 
 
@@ -94,17 +95,4 @@ const catContainer = document.querySelector (".cat-container")
 
 console.dir(catContainer);
 
-catContainer.innerHTML = `
-<div>
-    <h5>Blob</h5>
-    <p>10</p>
-</div>
-<div> 
-    <h5>Harold</h5>
-    <p>Age unknown</p>
-</div>
-<div>
-    <h5>Blurt</h5>
-    <p>21</p>
-</div>
-`;
+catContainer.innerHTML = JSON.stringify (cats); 
